@@ -198,6 +198,13 @@ app.get('/auth', passport.authenticate(config.IDCS_STRATEGY_NAME, {}), function(
   res.redirect('/home');
 });
 
+// Add by shengjun for debuging
+// app.get('/auth', function(req, res){
+//   console.log('\n---Resource: /auth -- passport.authenticate ---------------------');
+//   res.redirect('/home');
+// });
+
+
 //The /home URL is a protected resource.
 //The sample web application uses the ensureAuthenticated function to handle these protected resources.
 //Protected route. Uses ensureAuthenticated function.

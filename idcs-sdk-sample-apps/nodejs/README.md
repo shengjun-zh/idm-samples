@@ -1,6 +1,19 @@
 
 # Oracle Identity Cloud Service' SDK Node.js Sample Application
 
+2022-07-21 22:53:38 Shengjun
+
+注意点：
+1. 在Identity Domain下注册的App必须选择**Client Credentials** and **Authorization Code**.
+2. **auth.js**里的配置按照下面的样子配置
+  ```
+      "ClientTenant": "idcs-4dd6d7e5970c4b509f0cb448800fe949",
+      "IDCSHost": "https://%tenant%.identity.oraclecloud.com/",
+      "AudienceServiceUrl" : "https://idcs-4dd6d7e5970c4b509f0cb448800fe949.identity.oraclecloud.com/",
+      "TokenIssuer": "https://identity.oraclecloud.com/",
+  ```
+
+
 Oracle Identity Cloud Service provides a Software Development Kit (SDK) that you can use to integrate Node.js web applications with Oracle Identity Cloud Service.
 
 The Node.js SDK is available as a passport strategy, called **passport-idcs**, and must be installed in the Node.js web application source code's node_modules folder.
